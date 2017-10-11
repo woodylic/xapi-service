@@ -17,7 +17,7 @@ import config from '../config';
 import logger from '../logger';
 
 const getEventsRepo = () => {
-  switch (config.repoFactory.authRepoName) {
+  switch (config.repoFactory.eventsRepoName) {
     default: case 'redis':
       return redisEventsRepo({
         client: redis.createClient({
